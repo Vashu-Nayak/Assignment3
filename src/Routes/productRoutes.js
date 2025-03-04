@@ -53,3 +53,4 @@ productRouter.delete('/products/:id',async(req,res)=>{
     }
 
 })
+module.exports = {productRouter};

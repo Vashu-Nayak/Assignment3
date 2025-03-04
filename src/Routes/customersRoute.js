@@ -45,7 +45,7 @@ customerRouter.put('/customers/:id',async(req,res)=>{
 })
 customerRouter.delete('/customers/:id',async(req,res)=>{
     try {
-        let data = await custumers.findByIdAndDelete({_id : req.params.id})
+        let data = await customers.findByIdAndDelete({_id : req.params.id})
         res.status(200).json({message : "Custumers deleted"})
     } catch (error) {
         console.log("Error in deleteCustumers Controller" , error.message);
@@ -53,3 +53,4 @@ customerRouter.delete('/customers/:id',async(req,res)=>{
     }
 
 })
+module.exports = {customerRouter};

@@ -11,12 +11,14 @@ const customerSchema=new mongoose.Schema({
         type:String,
         required:true,
         unique:true,
+        trim:true,
+        validate: [/^[^\s@]+@[^\s@]+\.[^\s@]+$/, 'Invalid email format']
 
     },
     phone:{
-        type:String,
+        type:Number,
         required:true,
-        
+        trim : true,
 
     },
     address:{

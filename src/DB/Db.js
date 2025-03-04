@@ -4,7 +4,7 @@ const url='mongodb+srv://nvashu1:newpassword@cluster0.ta5mg.mongodb.net/FoodAppD
 
 const connectDB = async ()=>{
     try {
-        const conn = await mongoose.connect(dbUrl)
+        const conn = await mongoose.connect(url)
         console.log(`MongoDb connected ${conn.connection.host}`)
     } catch (error) {
         console.log("MongoDb connection Error : ", error)
